@@ -5,7 +5,7 @@ namespace MultiShop.Catalog.Entities
 {
     /// <summary>
     /// Category entity
-    /// </summary>
+    /// </summary> 
     public class Category
     {
         [BsonId]

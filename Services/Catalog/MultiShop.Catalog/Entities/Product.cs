@@ -6,7 +6,7 @@ namespace MultiShop.Catalog.Entities
 
     /// <summary>
     /// product entity
-    /// </summary>
+    /// </summary> 
     public class Product 
     {
         [BsonId]
