@@ -1,0 +1,12 @@
+﻿namespace MultiShop.Catalog.Settings
+{
+    public class DatabaseSettings : IDatabaseSettings
+    {
+        public string CategoryConnectionName { get; set; }
+        public string ProductsCollectionName { get; set; }
+        public string ProductDetailConnectionName { get; set; }
+        public string ProductImageCollectionName { get; set; }
+        public string ConnectionString { get; set; }
+        public string DatabaseName { get; set; }
+    }
+}
