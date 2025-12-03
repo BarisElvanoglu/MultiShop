@@ -1,6 +1,6 @@
 ﻿namespace MultiShop.Catalog.Dtos.PruductDtos
 {
-    public class CreatePruductDto
+    public class CreateProductDto
     {
         public string ProductName { get; set; }
         public decimal ProductPrice { get; set; }
