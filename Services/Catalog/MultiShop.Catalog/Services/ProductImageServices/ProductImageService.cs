@@ -7,7 +7,7 @@ using MultiShop.Catalog.Settings;
 
 namespace MultiShop.Catalog.Services.ProductImageServices
 {
-    public class ProductImageService
+    public class ProductImageService : IProductImageService
     {
         private readonly IMongoCollection<ProductImage> _productImageCollection;
         private readonly IMapper _mapper;
@@ -26,12 +26,18 @@ namespace MultiShop.Catalog.Services.ProductImageServices
             await _productImageCollection.InsertOneAsync(value);
         }
 
+        public Task CreateProductImageAsync(CreateProductImageDto createProductImageDto)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task DeleteProductImageAsync(string id)
         {
             await _productImageCollection.DeleteOneAsync(x => x.ProductImagesID == id);
         }
 
-        public async Task<List<ResultProductImageDto>> GetAllCategoriesAsync()
+
+        public async Task<List<ResultProductImageDto>> GetAllProductImageAsync()
         {
             var values = await _productImageCollection.Find(x => true).ToListAsync();
             return _mapper.Map<List<ResultProductImageDto>>(values);

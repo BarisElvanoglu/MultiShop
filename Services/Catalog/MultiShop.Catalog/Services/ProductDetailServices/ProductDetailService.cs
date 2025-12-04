@@ -23,7 +23,7 @@ public class ProductDetailService : IProductDetailService
         _mapper = imapper;
         var client = new MongoClient(_databaseSettings.ConnectionString);
         var database = client.GetDatabase(_databaseSettings.DatabaseName);
-        _ProductDetailConnection = database.GetCollection<ProductDetail>(_databaseSettings.ProductDetailConnectionName);
+        _ProductDetailConnection = database.GetCollection<ProductDetail>(_databaseSettings.ProductDetailCollectionName);
 
     }
     public Task CreateProductDetailAsync(CreateProductDetailDto createProductDetailDto)
