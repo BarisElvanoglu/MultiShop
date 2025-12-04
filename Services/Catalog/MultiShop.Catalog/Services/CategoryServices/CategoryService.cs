@@ -29,7 +29,7 @@ namespace MultiShop.Catalog.Services.CategoryServices
 
         public async Task DeleteCategoryAsync(string id)
         {
-            await _categoryCollection.DeleteOneAsync(x => x.CategoryID == id);
+            await _categoryCollection.DeleteOneAsync(x => x.CategoryId == id);
         }
 
         public async Task<List<ResultCategoryDto>> GetAllCategoriesAsync()
@@ -40,7 +40,7 @@ namespace MultiShop.Catalog.Services.CategoryServices
 
         public async Task<GetByIdCategoryDto> GetByIdCategoryAsync(string id)
         {
-            var values = await _categoryCollection.Find<Category>(x => x.CategoryID == id).FirstOrDefaultAsync();
+            var values = await _categoryCollection.Find<Category>(x => x.CategoryId == id).FirstOrDefaultAsync();
             return _mapper.Map<GetByIdCategoryDto>(values);
         }
 
@@ -48,7 +48,7 @@ namespace MultiShop.Catalog.Services.CategoryServices
         public async Task UpdateCategoryAsync(UpdateCategoryDto updateCategoryDto)
         {
             var values = _mapper.Map<Category>(updateCategoryDto);
-            await _categoryCollection.FindOneAndReplaceAsync(x => x.CategoryID == updateCategoryDto.CategoryID, values); 
+            await _categoryCollection.FindOneAndReplaceAsync(x => x.CategoryId == updateCategoryDto.CategoryID, values); 
         }   
     }
 }
