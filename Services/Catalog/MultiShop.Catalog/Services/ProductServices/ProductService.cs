@@ -24,7 +24,7 @@ namespace MultiShop.Catalog.Services.ProductServices
             _productConnection = database.GetCollection<Product>(_databaseSettings.ProductsCollectionName);
 
         }
-        public Task CreateProductAsync(Dtos.CategoryDtos.CreateProductDto createProductDto)
+        public Task CreateProductAsync(CreateProductDto createProductDto)
         {
             var values = _mapper.Map<Product>(createProductDto);
             return _productConnection.InsertOneAsync(values);

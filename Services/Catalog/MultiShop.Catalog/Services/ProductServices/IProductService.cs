@@ -9,7 +9,7 @@ namespace MultiShop.Catalog.Services.ProductServices
     public interface IProductService
     {
         Task<List<ResultProductDto>> GetAllProductsAsync();
-        Task CreateProductAsync(Dtos.CategoryDtos.CreateProductDto createProductDto);
+        Task CreateProductAsync(CreateProductDto createProductDto);
 
         Task UpdateProductAsync(UpdateProductDto updateProductDto);
 
