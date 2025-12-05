@@ -20,15 +20,11 @@ namespace MultiShop.Catalog.Services.ProductImageServices
             _mapper = mapper;
         }
 
-        public async Task CreateProductImageAsync(CreateProductDto createProductImageDto)
+
+        public async Task CreateProductImageAsync(CreateProductImageDto createProductImageDto)
         {
             var value = _mapper.Map<ProductImage>(createProductImageDto);
             await _productImageCollection.InsertOneAsync(value);
-        }
-
-        public Task CreateProductImageAsync(CreateProductImageDto createProductImageDto)
-        {
-            throw new NotImplementedException();
         }
 
         public async Task DeleteProductImageAsync(string id)
