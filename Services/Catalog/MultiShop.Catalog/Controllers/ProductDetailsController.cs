@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using MultiShop.Catalog.Dtos.CategoryDtos;
-using MultiShop.Catalog.Services.CategoryServices;
+using MultiShop.Catalog.Dtos.ProductDetailDtos;
+using MultiShop.Catalog.Dtos.PruductDtos;
+using MultiShop.Catalog.Services.ProductDetailServices;
 
 namespace MultiShop.Catalog.Controllers
 {
@@ -9,43 +10,43 @@ namespace MultiShop.Catalog.Controllers
     [ApiController]
     public class ProductDetailsController : ControllerBase
     {
-        private readonly ICategoryService _ProductDetailService;
-        public ProductDetailsController(ICategoryService ProductDetailService)
+        private readonly IProductDetailService _ProductDetailService;
+        public ProductDetailsController(IProductDetailService ProductDetailService)
         {
             _ProductDetailService = ProductDetailService;
         }
 
         [HttpGet]
-        public async Task<IActionResult> CategoryList()
+        public async Task<IActionResult> ProductList()
         {
-            var categories = await _ProductDetailService.GetAllCategoriesAsync();
+            var categories = await _ProductDetailService.GetAllProductDetailsAsync();
             return Ok(categories);
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetCategoryById(string id)
+        public async Task<IActionResult> GetProductById(string id)
         {
-            var ProductDetail = await _ProductDetailService.GetByIdCategoryAsync(id);
+            var ProductDetail = await _ProductDetailService.GetByIdProductDetailAsync(id);
             return Ok(ProductDetail);
         }
         [HttpPost]
-        public async Task<IActionResult> CreateCategory(CreateCategoryDto createCategoryDto)
+        public async Task<IActionResult> CreateProduct(CreateProductDetailDto createProductDto)
         {
-            await _ProductDetailService.CreateCategoryAsync(createCategoryDto);
+            await _ProductDetailService.CreateProductDetailAsync(createProductDto);
             return Ok("Ürün detayı başarı ile eklendi");
         }
 
         [HttpDelete]
-        public async Task<IActionResult> DeleteCategory(string id)
+        public async Task<IActionResult> DeleteProduct(string id)
         {
-            await _ProductDetailService.DeleteCategoryAsync(id);
+            await _ProductDetailService.DeleteProductDetailAsync(id);
             return Ok("Ürün detayı başarı ile silindi");
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateCategory(UpdateCategoryDto updateCategoryDto)
+        public async Task<IActionResult> UpdateProduct(UpdateProductDetailDto updateProductDto)
         {
-            await _ProductDetailService.UpdateCategoryAsync(updateCategoryDto);
+            await _ProductDetailService.UpdateProductDetailAsync(updateProductDto);
             return Ok("Ürün detayı başarı ile güncellendi");
         }
     }
