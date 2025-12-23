@@ -5,10 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MultiShop.Order.Application.Features.Mediatör.Commands.OderingCommands
+namespace MultiShop.Order.Application.Features.Mediatör.Commands.OrderingCommands
 {
-    public class UpdateOrderingRequest: IRequest
+    public class UpdateOrderingCommand: IRequest
     {
+        public int Id { get; set; }
         public int OrderingId { get; set; }
         public string UserId { get; set; }
         public DateTime OrderDate { get; set; }

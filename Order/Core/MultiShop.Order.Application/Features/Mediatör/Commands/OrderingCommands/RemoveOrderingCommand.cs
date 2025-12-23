@@ -5,12 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MultiShop.Order.Application.Features.Mediatör.Commands.OderingCommands
+namespace MultiShop.Order.Application.Features.Mediatör.Commands.OrderingCommands
 {
-    public class RemoveOrderingRequest : IRequest
+    public class RemoveOrderingCommand : IRequest
     {
         public int Id { get; set; }
-        public RemoveOrderingRequest(int id)
+        public RemoveOrderingCommand(int id)
         {
             Id = id;
         }   
