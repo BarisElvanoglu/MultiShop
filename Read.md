@@ -14,3 +14,7 @@ docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /va
 Timeout hatasından sonra docker restart portainer komutu ile portainerı restart ettim.
 
 localhost:9000/#!/init/admin
+
+# portainer
+user name : admin 
+Password : 0>4Z"79HK56,I+aSY`1W~^xByMs$fVN2
