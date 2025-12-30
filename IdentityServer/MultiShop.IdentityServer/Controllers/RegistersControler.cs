@@ -9,15 +9,15 @@ namespace MultiShop.IdentityServer.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class RegisterControler : ControllerBase
+    public class RegistersControler : ControllerBase
     {
         private readonly UserManager<ApplicationUser> _userManager;
 
-        public RegisterControler(UserManager<ApplicationUser> userManager)
+        public RegistersControler(UserManager<ApplicationUser> userManager)
         {
             _userManager = userManager;
-        }   
-        
+        }
+
         [HttpPost]
         public async Task<IActionResult> Register(UserRegisterDto userRegisterDto)
         {
@@ -31,8 +31,12 @@ namespace MultiShop.IdentityServer.Controllers
             var result = await _userManager.CreateAsync(user, userRegisterDto.Password);
             if (result.Succeeded)
             {
-                return Ok();
+                return Ok("Kullanıcı başarıyla eklendi");
             }
-            return BadRequest(result.Errors);
+            else
+            {
+                return Ok("Bir hata oluştu ");
+            }
         }
+    }
 }
