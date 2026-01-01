@@ -24,3 +24,4 @@ Password : 0>4Z"79HK56,I+aSY`1W~^xByMs$fVN2
 Unable to remove directory
 C:\Users\elvan\OneDrive\Desktop\MultiShop\MultiShop\IdentityServer\MultiShop.IdentityServer
 Bin ve obj dosyalarını sil
+
