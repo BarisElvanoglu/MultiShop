@@ -9,11 +9,11 @@ namespace MultiShop.IdentityServer.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class RegistersControler : ControllerBase
+    public class RegistersController : ControllerBase
     {
         private readonly UserManager<ApplicationUser> _userManager;
 
-        public RegistersControler(UserManager<ApplicationUser> userManager)
+        public RegistersController(UserManager<ApplicationUser> userManager)
         {
             _userManager = userManager;
         }
