@@ -25,3 +25,4 @@ Unable to remove directory
 C:\Users\elvan\OneDrive\Desktop\MultiShop\MultiShop\IdentityServer\MultiShop.IdentityServer
 Bin ve obj dosyalarını sil
 
+# token nasıl alınır?
