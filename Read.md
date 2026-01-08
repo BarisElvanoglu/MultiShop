@@ -17,7 +17,8 @@ localhost:9000/#!/init/admin
 
 # portainer
 user name : admin 
-Password : 0>4Z"79HK56,I+aSY`1W~^xByMs$fVN2
+Password : Kagan19071q.
+
 
 
 # Identityserver hata : 
@@ -26,3 +27,12 @@ C:\Users\elvan\OneDrive\Desktop\MultiShop\MultiShop\IdentityServer\MultiShop.Ide
 Bin ve obj dosyalarını sil
 
 # token nasıl alınır?
+
+
+CargoDb
+Kagan19071q.
+
+# Portainer 
+CargoDb
+SA password:  Kagan19071q.
+

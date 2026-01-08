@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Multihop.Cargo.EntityLayer\Multihop.Cargo.EntityLayer.csproj" />
+  </ItemGroup>
+
 </Project>
