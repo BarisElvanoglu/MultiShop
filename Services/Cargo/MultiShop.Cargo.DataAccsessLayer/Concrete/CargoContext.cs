@@ -12,7 +12,7 @@ namespace MultiShop.Cargo.DataAccsessLayer.Concrete
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=localhost,1441;initial Catolog=MultiShopCargoDb;User=sa;Password=Kagan19071q.");
+            optionsBuilder.UseSqlServer("Server=localhost,1441;Initial Catalog=MultiShopCargoDb;User=sa;Password=Kagan19071q.");
         }
 
         public DbSet<CargoCompany> CargoCompany { get; set; }
