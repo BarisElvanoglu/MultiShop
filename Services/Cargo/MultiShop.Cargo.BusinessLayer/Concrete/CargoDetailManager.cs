@@ -1,0 +1,46 @@
+﻿using Multihop.Cargo.EntityLayer.Concrete;
+using MultiShop.Cargo.BusinessLayer.Abstract;
+using MultiShop.Cargo.DataAccsessLayer.Abstract;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MultiShop.Cargo.BusinessLayer.Concrete
+{
+    public class CargoDetailManager : ICargoDetailService
+    {
+        private readonly ICargoDetailDal _cargoDetailDal;
+
+        public CargoDetailManager(ICargoDetailDal cargoDetailDal)
+        {
+            _cargoDetailDal = cargoDetailDal;
+        }
+
+        public void Delete(CargoDetail obj)
+        {
+            _cargoDetailDal.Delete(obj);
+        }
+
+        public List<CargoDetail> GetAll()
+        {
+            return _cargoDetailDal.GetAll();
+        }
+
+        public CargoDetail GetById(int id)
+        {
+            return _cargoDetailDal.GetById(id); 
+        }
+
+        public void Insert(CargoDetail obj)
+        {
+            _cargoDetailDal.Insert(obj);
+        }
+
+        public void Update(CargoDetail obj)
+        {
+            _cargoDetailDal.Update(obj);
+        }
+    }
+}
