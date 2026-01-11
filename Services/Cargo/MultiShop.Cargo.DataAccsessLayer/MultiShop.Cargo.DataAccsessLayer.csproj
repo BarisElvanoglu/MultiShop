@@ -17,4 +17,8 @@
     <ProjectReference Include="..\Multihop.Cargo.EntityLayer\Multihop.Cargo.EntityLayer.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
 </Project>
