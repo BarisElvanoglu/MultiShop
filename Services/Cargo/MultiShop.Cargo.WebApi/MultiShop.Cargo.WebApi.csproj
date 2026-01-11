@@ -25,8 +25,4 @@
     <ProjectReference Include="..\MultiShop.Cargo.DtoLayer\MultiShop.Cargo.DtoLayer.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>

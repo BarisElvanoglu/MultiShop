@@ -18,17 +18,17 @@ namespace MultiShop.Cargo.BusinessLayer.Concrete
             _cargoCompanyDal = cargoCompanyDal;
         }
 
-        public void TDelete(CargoCompany obj)
+        public void Delete(CargoCompany obj)
         {
             _cargoCompanyDal.Delete(obj);
         }
 
-        public List<CargoCompany> TGetAll()
+        public List<CargoCompany> GetAll()
         {
             return _cargoCompanyDal.GetAll();
         }
 
-        public CargoCompany TGetById(int id)
+        public CargoCompany GetById(int id)
         {
             return _cargoCompanyDal.GetById(id);
         }
