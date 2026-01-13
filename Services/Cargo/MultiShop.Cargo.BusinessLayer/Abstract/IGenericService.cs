@@ -9,7 +9,7 @@ namespace MultiShop.Cargo.BusinessLayer.Abstract
     public interface IGenericService<T> where T : class
     {
         void Insert(T obj);
-        void Delete(T obj);
+        void Delete(int id);
         void Update(T obj);
         List<T> GetAll();
         T GetById(int id);

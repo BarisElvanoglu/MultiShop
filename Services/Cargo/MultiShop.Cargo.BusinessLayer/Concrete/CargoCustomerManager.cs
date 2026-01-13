@@ -17,9 +17,9 @@ namespace MultiShop.Cargo.BusinessLayer.Concrete
             _cargoCustomerDal = cargoCustomerDal;
         }
 
-        public void Delete(CargoCustomer entity)
+        public void Delete(int id)
         {
-            _cargoCustomerDal.Delete(entity);
+            _cargoCustomerDal.Delete(id);
         }
 
         public List<CargoCustomer> GetAll()
