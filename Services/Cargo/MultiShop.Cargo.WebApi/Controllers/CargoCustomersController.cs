@@ -55,6 +55,8 @@ namespace MultiShop.Cargo.WebApi.Controllers
             _cargoCustomerService.Delete(id);
             return Ok("Kargo Müşteri Silme İşlemi Başarıyla yapıldı.");
         }
+
+        [HttpPut]
         public IActionResult UpdateCargoCustomer(UpdateCargoCustomerDto updateCargoCustomerDto)
         {
             CargoCustomer cargoCustomer = new CargoCustomer()
