@@ -18,9 +18,9 @@ namespace MultiShop.Cargo.DataAccsessLayer.Repositories
             _context = context;
         }
 
-        public void Delete(T obj)
+        public void Delete(int id)
         {
-            var values = _context.Set<T>().Find(obj);
+            var values = _context.Set<T>().Find(id);
             _context.Set<T>().Remove(values);
             _context.SaveChanges();
         }

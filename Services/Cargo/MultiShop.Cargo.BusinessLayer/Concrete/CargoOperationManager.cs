@@ -17,9 +17,9 @@ namespace MultiShop.Cargo.BusinessLayer.Concrete
             _cargoOperationService = cargoOperationService;
         }
 
-        public void Delete(CargoOperation entity)
+        public void Delete(int id)
         {
-            _cargoOperationService.Delete(entity);
+            _cargoOperationService.Delete(id);
         }
 
         public List<CargoOperation> GetAll()

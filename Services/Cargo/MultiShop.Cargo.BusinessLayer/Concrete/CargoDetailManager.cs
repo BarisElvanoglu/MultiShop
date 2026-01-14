@@ -18,9 +18,9 @@ namespace MultiShop.Cargo.BusinessLayer.Concrete
             _cargoDetailDal = cargoDetailDal;
         }
 
-        public void Delete(CargoDetail obj)
+        public void Delete(int id)
         {
-            _cargoDetailDal.Delete(obj);
+            _cargoDetailDal.Delete(id);
         }
 
         public List<CargoDetail> GetAll()
